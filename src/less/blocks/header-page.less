@@ -1,0 +1,30 @@
+.header-page {
+  background-color: @header-bg-color;
+  color: @header-text-color;
+
+}
+
+.header-page__wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px 0 0 0;
+
+  @media @tablet-widths {
+    flex-direction: row;
+    padding: 0 30px 0;
+  }
+
+  @media @desktop-widths {
+    max-width: 800px;
+    margin: 0 auto;
+
+    font-size: @font-size-big - 4px;
+  }
+}
+
+.header-page__contacts {
+  display: none;
+
+}

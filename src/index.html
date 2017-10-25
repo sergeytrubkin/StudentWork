@@ -2,43 +2,48 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/style-min.css">
+  <title>StudentWork</title>
 </head>
 <body>
-  <header class="main-header">
+  <header class="header-page">
 
-    <!-- /main-header__wrap -->
-    <div class="main-header__wrap">
+    <div class="header-page__wrap">
 
       <div class="logo">
-        <a href="#">Название сайта</a>
+        <a href="" class="logo__link">Логотип</a>
       </div>
 
-      <!-- header-menu -->
-      <nav class="header-menu">
-        <ul class="menu-list">
-          <li class="menu-item"><a href="#" class="menu-link">Главная</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
-          <li class="menu-item"><a href="#" class="menu-link">Авторам</a></li>
+      <!-- main-menu -->
+      <button class="btn burger  burger--nojs" type="button">
+        <span class="burger__layer">Меню</span>
+      </button>
+      <nav class="main-nav  main-nav--nojs">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Главная</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Контакты</a></li>
+          <li class="main-nav__item"><a href="#" class="main-nav__link">Авторам</a></li>
         </ul>
-      </nav><!-- /header-menu -->
+      </nav><!-- /main-nav -->
 
-      <!-- header-contacts -->
-      <div class="header-contacts">
-        <span class="header-contacts__text">Напишите нам</span>
-        <a href="mailto:likvitbel@mail.ru" class="header-contacts__link">
+      <!-- header-page__contacts -->
+      <div class="header-page__contacts">
+        <span class="header-page__text">Напишите нам</span>
+        <a href="mailto:likvitbel@mail.ru" class="header-page__link">
           likvitbel@mail.ru
         </a>
-      </div><!-- /header-contacts -->
-    </div><!-- /main-header__wrap -->
-
+      </div><!-- /header-page__contacts -->
+    </div><!-- /header-page__wrap -->
   </header>
 
   <!-- main -->
 
-  <main class="main-content">
-
-    <h1 class="describe">
+  <main class="main-page">
+    <div class="main-page__wrap">
+      <h1 class="main-page__describe">
       Помощь студентам при написании работ технической направленности
     </h1>
 
@@ -71,29 +76,28 @@
               <span class="field-text__text"></span>
             </label>
 
-
             <label class="field-text__item">
-              <input type="number" name="count" placeholder="Количество страниц*" required>
+              <input class="field-text__input" type="number" name="count" placeholder="Количество страниц*" required>
               <span class="field-text__text"></span>
             </label>
 
             <label class="field-text__item">
-              <input type="text" name="name" placeholder="Ваше имя" required>
+              <input class="field-text__input" type="text" name="name" placeholder="Ваше имя" required>
               <span class="field-text__text"></span>
             </label>
 
             <label class="field-text__item">
-              <input type="tel" name="tel" placeholder="Номер телефона*" placeholder>
+              <input class="field-text__input" type="tel" name="tel" placeholder="Номер телефона*" placeholder>
               <span class="field-text__text"></span>
             </label>
 
             <label class="field-text__item">
-              <input type="mail" name="mail" placeholder="Ваш email*">
+              <input class="field-text__input" type="mail" name="mail" placeholder="Ваш email*">
               <span class="field-text__text"></span>
             </label>
 
             <label class="field-text__item">
-              <select name="country" id="country">
+              <select class="field-text__select" name="country" id="country">
                 <option value="false">Ваша страна</option>
                 <option value="blr">Беларусь</option>
                 <option value="rus">Россия</option>
@@ -105,11 +109,11 @@
           </div><!-- /field-text__wrapper -->
         </div><!-- field-text -->
 
-        <input type="file" value="file" placeholder="Выберите файл">
+        <input class="field-text__file" type="file" multiple value="file" placeholder="Выберите файл">
 
         <div class="form__button">
           <div class="form__button-wrap">
-            <button type="submit" class="button form__btn">Узнать стоимость</button>
+            <button type="submit" class="btn form__btn">Узнать стоимость</button>
             <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
           </div>
         </div>
@@ -124,54 +128,55 @@
       <p class="cooperation__desription">Регистрируйтесь в форму - мы свяжемся с Вами для обсуждения условий сотрудничества</p>
       <form action="#" class="form cooperatin__form">
         <div class="form__wrapper">
-        <div class="field-text">
-          <div class="field-text__wrapper">
+          <div class="field-text">
+            <div class="field-text__wrapper">
 
-            <label class="field-text__item">
-              <input class="field-text__input" type="text" name="name" placeholder="ФИО*" required>
-              <span class="field-text__text"></span>
-            </label>
+              <label class="field-text__item">
+                <input class="field-text__input" type="text" name="name" placeholder="ФИО*" required>
+                <span class="field-text__text"></span>
+              </label>
 
-            <label class="field-text__item">
-              <input class="field-text__input" type="tel" name="tel" placeholder="номер телефона*" required>
-              <span class="field-text__text"></span>
-            </label>
+              <label class="field-text__item">
+                <input class="field-text__input" type="tel" name="tel" placeholder="номер телефона*" required>
+                <span class="field-text__text"></span>
+              </label>
 
-            <label class="field-text__item">
-              <input class="field-text__input" type="mail" name="mail" placeholder="email*" required>
-              <span class="field-text__text"></span>
-            </label>
+              <label class="field-text__item">
+                <input class="field-text__input" type="mail" name="mail" placeholder="email*" required>
+                <span class="field-text__text"></span>
+              </label>
 
-            <label class="field-text__item">
-              <input class="field-text__input" type="text" name="address" placeholder="адрес">
-              <span class="field-text__text"></span>
-            </label>
+              <label class="field-text__item">
+                <input class="field-text__input" type="text" name="address" placeholder="адрес">
+                <span class="field-text__text"></span>
+              </label>
 
 
-            <label class="field-text__item">
-              <input type="number" name="count" placeholder="Количество страниц*" required>
-              <span class="field-text__text"></span>
-            </label>
+              <label class="field-text__item">
+                <input type="number" name="count" placeholder="Количество страниц*" required>
+                <span class="field-text__text"></span>
+              </label>
 
-            <label class="field-text__item">
-              <textarea name="text" cols="30" rows="10">Примечания</textarea>
-            </label>
+              <label class="field-text__item">
+                <textarea name="text" cols="30" rows="10">Примечания</textarea>
+              </label>
 
-          </div><!-- /field-text__wrapper -->
-        </div><!-- field-text -->
+            </div><!-- /field-text__wrapper -->
+          </div><!-- field-text -->
 
-        <input type="file" value="file" placeholder="Выберите файл">
+          <input type="file" value="file" placeholder="Выберите файл">
 
-        <div class="form__button">
-          <div class="form__button-wrap">
-            <button type="submit" class="button form__btn">Отправить</button>
-            <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+          <div class="form__button">
+            <div class="form__button-wrap">
+              <button type="submit" class="btn form__btn">Отправить</button>
+              <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+            </div>
           </div>
-        </div>
 
-      </div><!-- /form__wrapper -->
+        </div><!-- /form__wrapper -->
       </form>
     </div><!-- /cooperation -->
+    </div><!-- main-page__wrap -->
 
 
   </main>
@@ -196,5 +201,8 @@
     </div>
 
   </footer>
+  <script src="js/jquery-3.1.1.min.js"></script>
+  <script src="js/custom.js"></script>
+
 </body>
 </html>
