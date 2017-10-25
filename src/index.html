@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <header class="main-header">
+
+    <!-- /main-header__wrap -->
+    <div class="main-header__wrap">
+
+      <div class="logo">
+        <a href="#">Название сайта</a>
+      </div>
+
+      <!-- header-menu -->
+      <nav class="header-menu">
+        <ul class="menu-list">
+          <li class="menu-item"><a href="#" class="menu-link">Главная</a></li>
+          <li class="menu-item"><a href="#" class="menu-link">Контакты</a></li>
+          <li class="menu-item"><a href="#" class="menu-link">Авторам</a></li>
+        </ul>
+      </nav><!-- /header-menu -->
+
+      <!-- header-contacts -->
+      <div class="header-contacts">
+        <span class="header-contacts__text">Напишите нам</span>
+        <a href="mailto:likvitbel@mail.ru" class="header-contacts__link">
+          likvitbel@mail.ru
+        </a>
+      </div><!-- /header-contacts -->
+    </div><!-- /main-header__wrap -->
+
+  </header>
+
+  <!-- main -->
+
+  <main class="main-content">
+
+    <h1 class="describe">
+      Помощь студентам при написании работ технической направленности
+    </h1>
+
+
+    <!-- form -->
+
+    <form class="form" action="#" method="post" enctype="multipart/form-data" multiple>
+      <div class="form__wrapper">
+        <h3 class="form__title">Узнайте стоимость работы:</h3>
+        <div class="field-text  field-text--position-1">
+          <div class="field-text__wrapper">
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="text" name="name" placeholder="Укажите имя*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="datetime" name="deadline" placeholder="Срок сдачи*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="text" name="workTheme" placeholder="Тема работы*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="text" name="subjectName" placeholder="Название предмета">
+              <span class="field-text__text"></span>
+            </label>
+
+
+            <label class="field-text__item">
+              <input type="number" name="count" placeholder="Количество страниц*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input type="text" name="name" placeholder="Ваше имя" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input type="tel" name="tel" placeholder="Номер телефона*" placeholder>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input type="mail" name="mail" placeholder="Ваш email*">
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <select name="country" id="country">
+                <option value="false">Ваша страна</option>
+                <option value="blr">Беларусь</option>
+                <option value="rus">Россия</option>
+                <option value="ukr">Украина</option>
+              </select>
+              <span class="field-text__text"></span>
+            </label>
+
+          </div><!-- /field-text__wrapper -->
+        </div><!-- field-text -->
+
+        <input type="file" value="file" placeholder="Выберите файл">
+
+        <div class="form__button">
+          <div class="form__button-wrap">
+            <button type="submit" class="button form__btn">Узнать стоимость</button>
+            <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+          </div>
+        </div>
+
+      </div><!-- /form__wrapper -->
+    </form>
+
+    <!-- /form -->
+
+    <div class="cooperation">
+      <h3 class="cooperation__heading">Приглашаем к сотрудничеству авторов</h3>
+      <p class="cooperation__desription">Регистрируйтесь в форму - мы свяжемся с Вами для обсуждения условий сотрудничества</p>
+      <form action="#" class="form cooperatin__form">
+        <div class="form__wrapper">
+        <div class="field-text">
+          <div class="field-text__wrapper">
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="text" name="name" placeholder="ФИО*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="tel" name="tel" placeholder="номер телефона*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="mail" name="mail" placeholder="email*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <input class="field-text__input" type="text" name="address" placeholder="адрес">
+              <span class="field-text__text"></span>
+            </label>
+
+
+            <label class="field-text__item">
+              <input type="number" name="count" placeholder="Количество страниц*" required>
+              <span class="field-text__text"></span>
+            </label>
+
+            <label class="field-text__item">
+              <textarea name="text" cols="30" rows="10">Примечания</textarea>
+            </label>
+
+          </div><!-- /field-text__wrapper -->
+        </div><!-- field-text -->
+
+        <input type="file" value="file" placeholder="Выберите файл">
+
+        <div class="form__button">
+          <div class="form__button-wrap">
+            <button type="submit" class="button form__btn">Отправить</button>
+            <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+          </div>
+        </div>
+
+      </div><!-- /form__wrapper -->
+      </form>
+    </div><!-- /cooperation -->
+
+
+  </main>
+
+  <footer class="footer-page">
+
+    <h2 class="footer-page__heading">Контакты:</h2>
+
+    <div class="footer-page__left">
+      <p class="footer-page__text">Индивидуальный предприниматель <span>Трубкин Е.А.</span></p>
+      <p class="footer-page__text">Свидетельство о гос.регистрации <span>№??????????????</span></p>
+    </div>
+
+    <div class="footer-page__mail">
+      <p class="footer-page__text">Пишите нам:</p>
+      <a href="mailto:mail@mail.ru" class="footer-page__link">mail@mail.ru</a>
+    </div>
+
+    <div class="footer-page__contacts">
+      <p class="footer-page__text">Звоните нам:</p>
+      <a href="tel:+375297117786" class="footer-page__link">+375(029)711-77-86</a>
+    </div>
+
+  </footer>
+</body>
+</html>
