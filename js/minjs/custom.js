@@ -1,0 +1,1 @@
+$(function(){var n=$(".burger");$(".main-nav").removeClass("main-nav--nojs"),n.removeClass("burger--nojs"),$(n).on("click",function(n){n.preventDefault(),$(this).toggleClass("burger--close"),$(".main-nav").toggleClass("main-nav--opened")})});
