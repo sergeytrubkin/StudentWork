@@ -1,8 +1,13 @@
 .form {
-  padding: 20px 30px;
-  background: rgba(180,247,227,1);
-  background: linear-gradient(to bottom, rgba(180,247,227,1) 0%, rgba(219,184,131,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4f7e3', endColorstr='#dbb883', GradientType=0 );
+  padding: 50px 30px;
+  background: #fcfdff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0.61) 15%, rgba(41, 137, 216, 0.61) 85%, rgba(255, 255, 255, 0) 100%);
+
+  @media @desktop-widths {
+    background: rgba(180,247,227,1);
+    background: linear-gradient(to bottom, rgba(180,247,227, 0.5) 0%, rgba(219,184,131, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4f7e3', endColorstr='#dbb883', GradientType=0 );
+  }
 }
 
 .form__title {
@@ -29,5 +34,13 @@
 
 .form__endnote {
   margin-bottom: 15px;
-  opacity: 0.6;
+  opacity: 1;
+
+  &-visible {
+    display: none;
+  }
+}
+
+.form__mark {
+  color: @form-warning-text;
 }
