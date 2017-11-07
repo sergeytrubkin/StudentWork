@@ -431,8 +431,13 @@ a {
   color: #000;
 }
 .header-page {
+  background: url("../img/11-fon-dlya-sayta.png"), #000 url("../img/header-bg.jpg");
+  background-size: auto, auto 100%;
+  background-repeat: repeat, no-repeat;
+  background-position: top left, center;
+}
+.header-page__top {
   background-color: #565179;
-  color: #ff0;
 }
 .header-page__wrap {
   display: -ms-flexbox;
@@ -444,6 +449,13 @@ a {
   -ms-flex-align: center;
       align-items: center;
   padding: 20px 0 0 0;
+  color: #ff0;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 .header-page__contacts {
   display: none;
@@ -528,14 +540,16 @@ a {
   color: #ff0;
 }
 .main-nav {
-  position: relative;
-  top: 0;
+  position: absolute;
+  top: 58px;
   left: 0;
+  right: 0;
   width: 100%;
   height: 0;
+  background-color: inherit;
   overflow: hidden;
   transition: height 0.5s ease-out;
-  z-index: 1;
+  z-index: 10;
 }
 .main-nav--nojs {
   height: auto;
@@ -553,7 +567,8 @@ a {
 }
 .main-nav__item {
   text-align: center;
-  padding: 30px 0;
+  padding: 20px 0;
+  background-color: #565179;
   border-bottom: 1px solid #333;
 }
 .main-nav__item:first-child {
@@ -576,31 +591,51 @@ a {
 .main-nav__link:active {
   color: #f49f9f;
 }
-.main-page {
-  background: url("../img/main-bg2.jpg") center;
-}
 .main-page__wrap {
-  padding: 30px 0 0 0;
   text-align: center;
 }
-.main-page__describe {
+.promo {
+  background-color: rgba(31, 28, 28, 0.63);
+}
+.promo__wrap {
+  padding-top: 35px;
+  text-align: center;
+}
+.promo__title {
   display: inline-block;
   max-width: 350px;
   margin: 0 auto;
   margin-bottom: 30px;
   padding: 0 20px;
-  color: #ffe141;
+  color: #ff0;
   font-size: 20px;
   text-align: center;
   text-shadow: 3px 2px 1px #050505;
 }
+.promo__describe:first-letter {
+  margin-left: 25px;
+}
+.promo__describe--visible {
+  display: none;
+}
 .form {
-  padding: 50px 30px;
+  padding: 30px 30px;
   background: #fcfdff;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0.61) 15%, rgba(41, 137, 216, 0.61) 85%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0.7) 10%, rgba(41, 137, 216, 0.7) 90%, rgba(255, 255, 255, 0) 100%);
+}
+.form__wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  height: 100%;
 }
 .form__title {
   margin-bottom: 30px;
+  text-shadow: 0 0 3px #000;
+  color: #fff;
 }
 .form__btn {
   width: 100%;
@@ -611,9 +646,16 @@ a {
   font-weight: bold;
   border: 1px solid #000000;
   border-radius: 15px;
+  box-shadow: 3px 3px 16px 0px #101010;
+  transition: 0.3s all  ease;
+}
+.form__btn:hover {
+  background-color: #ff0;
+  box-shadow: 3px 3px 16px 0px #101010;
 }
 .form__btn:active {
   background-color: #4ec199;
+  box-shadow: 2px 2px 4px 0 #101010 inset;
 }
 .form__endnote {
   margin-bottom: 15px;
@@ -632,18 +674,57 @@ a {
   margin-bottom: 10px;
   padding: 10px 20px;
   box-sizing: border-box;
-  border: 2px transparent dotted;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 7px;
   outline: none;
+  resize: none;
+}
+.field-text__input:hover,
+.field-text__select:hover {
+  cursor: pointer;
 }
 .field-text__input:focus,
 .field-text__select:focus {
-  border: 2px #3849dc dotted;
+  background-color: #ffffff;
 }
 .field-text__file {
-  margin-right: 100%;
+  display: block;
+  text-align: left;
+}
+.field-text__input-file {
   margin-bottom: 25px;
   outline: none;
+}
+.about {
+  border-top: 2px solid #ca7413;
+  border-bottom: 2px solid #ca7413;
+  background: #000 url("../../img/16-fon-dlya-sayta.png");
+}
+.about__wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.about__heading {
+  margin: 0;
+  color: #ff0;
+  text-shadow: 3px 2px 1px #050505;
+}
+.about__text {
+  color: #fff;
+  text-align: justify;
+}
+.about__text:first-letter {
+  margin-left: 20px;
+}
+.cooperation {
+  background: #000 url("../img/cooperation-bg2.jpg") center;
+  background-size: auto 100%;
+  border-bottom: 2px solid #ca7413;
+}
+.cooperation__wrap {
+  padding: 30px 0;
 }
 .cooperation__heading {
   width: 250px;
@@ -651,14 +732,17 @@ a {
   margin-bottom: 30px;
   text-align: center;
   line-height: 1.4;
-}
-.cooperation__heading {
-  padding: 0 30px;
   color: #ff0;
   text-shadow: 3px 2px 1px #050505;
 }
+.cooperation__description {
+  display: none;
+}
+.cooperation__description .cooperation__text:first-letter {
+  margin-left: 25px;
+}
 .footer-page {
-  background-color: #252733;
+  background: #252733 url("../../img/8-fon-dlya-sayta.png");
   color: #bdd9eb;
 }
 .footer-page__wrap {
@@ -679,12 +763,19 @@ a {
 }
 .footer-page__link {
   color: #bdd9eb;
+  cursor: pointer;
+}
+.footer-page__link:hover {
+  text-decoration: underline;
 }
 .footer-page__left {
   color: #858a8d;
   font-size: 12px;
 }
-@media (min-width: 600px) {
+@media (min-width: 650px) {
+  .header-page {
+    background-color: transparent;
+  }
   .header-page__wrap {
     -ms-flex-direction: row;
     flex-direction: row;
@@ -694,7 +785,7 @@ a {
     display: none;
   }
   .logo {
-    min-width: 150px;
+    min-width: 100px;
     margin-bottom: 0;
   }
   .main-nav {
@@ -721,19 +812,95 @@ a {
     align-items: center;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    padding: 0;
-    height: 88px;
+    padding: 20px 0;
+    height: auto;
+    background-color: transparent;
     border: 0;
   }
   .main-nav__item:first-child {
     border-top: 0;
   }
+  .main-nav__bg {
+    background-color: #565179;
+  }
+  .promo__wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+  .promo__title {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 50px;
+  }
+  .promo__describe--visible {
+    display: inline-block;
+    text-align: justify;
+  }
+  .promo__describe {
+    width: 45%;
+    padding: 10px;
+    color: #fff;
+    text-shadow: 1px 1px 1px #121212;
+    line-height: 22px;
+  }
+  .form {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(41, 137, 216, 0.5) 0%, rgba(41, 137, 216, 0.5) 100%);
+    border-radius: 15px;
+    font-size: 12px;
+    box-sizing: border-box;
+  }
+  .form__endnote-visible {
+    display: inline;
+  }
+  .field-text__wrapper {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  .field-text__item {
+    width: 48%;
+  }
+  .field-text__item:nth-child(2n + 1) {
+    margin-right: 10px;
+  }
+  .field-text__item:last-child {
+    margin-right: 0;
+  }
+  .field-text__input,
+  .field-text__select {
+    padding: 10px 10px;
+  }
+  .field-text__item--textarea {
+    width: 100%;
+  }
 }
 @media (min-width: 850px) {
+  .header-page {
+    background-size: auto, cover;
+  }
+  .header-page__top {
+    background-color: rgba(86, 81, 121, 0.85);
+    border-bottom: 2px solid #ca7413;
+  }
   .header-page__wrap {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     font-size: 20px;
+  }
+  .fixed {
+    background-color: #565179;
+    border-bottom: none;
   }
   .burger {
     display: none;
@@ -744,6 +911,7 @@ a {
     display: flex;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    background-color: transparent;
   }
   .main-nav__list {
     width: 100%;
@@ -765,9 +933,96 @@ a {
   .main-nav__item:first-child {
     border-top: 0;
   }
+  .promo__wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 120px 5%;
+  }
+  .promo__title {
+    padding: 0 10%;
+    line-height: 40px;
+    font-size: 30px;
+  }
+  .promo__describe {
+    font-size: 24px;
+    line-height: 30px;
+    background-color: transparent;
+  }
+  .form__cooperation {
+    -ms-flex-order: 2;
+    order: 2;
+  }
   .form {
     background: #b4f7e3;
     background: linear-gradient(to bottom, rgba(180, 247, 227, 0.5) 0%, rgba(219, 184, 131, 0.5) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b4f7e3', endColorstr='#dbb883', GradientType=0);
+    font-size: 16px;
+  }
+  .form__title {
+    font-size: 24px;
+  }
+  .about__wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+  .about__heading {
+    font-size: 30px;
+  }
+  .about__text {
+    font-size: 24px;
+  }
+  .cooperation {
+    background-size: cover;
+  }
+  .cooperation__wrap {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 5%;
+  }
+  .cooperation__heading {
+    width: 100%;
+    margin-bottom: 50px;
+    font-size: 30px;
+  }
+  .cooperation__description {
+    -ms-flex-order: 3;
+    order: 3;
+    display: block;
+    width: 45%;
+    margin-bottom: 40px;
+    text-align: justify;
+    font-size: 24px;
+    text-shadow: 2px 2px 3px #000000;
+    color: #fff;
+  }
+  .footer-page {
+    padding: 40px 0;
+  }
+  .footer-page__wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .footer-page__heading {
+    display: inline-block;
+    margin-bottom: 50px;
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+  .footer-page__inner-wrap {
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    font-size: 24px;
+    border-bottom: 0;
+  }
+  .footer-page__left .footer-page__text {
+    display: inline-block;
   }
 }
