@@ -699,7 +699,7 @@ a {
 .about {
   border-top: 2px solid #ca7413;
   border-bottom: 2px solid #ca7413;
-  background: #000 url("../../img/16-fon-dlya-sayta.png");
+  background: #000 url("../img/16-fon-dlya-sayta.png");
 }
 .about__wrap {
   width: 80%;
@@ -742,7 +742,7 @@ a {
   margin-left: 25px;
 }
 .footer-page {
-  background: #252733 url("../../img/8-fon-dlya-sayta.png");
+  background: #252733 url("../img/8-fon-dlya-sayta.png");
   color: #bdd9eb;
 }
 .footer-page__wrap {
