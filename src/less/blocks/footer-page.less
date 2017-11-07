@@ -1,14 +1,33 @@
 .footer-page {
-  background-color: @footer-bg;
+  background: @footer-bg url("../../img/8-fon-dlya-sayta.png");
   color: @footer-text-color;
+
+  @media @desktop-widths {
+    padding: 40px 0;
+  }
 }
 
 .footer-page__wrap {
   padding: 20px;
+
+  @media @desktop-widths {
+    max-width: @max-widht-desktop;
+    margin: 0 auto;
+
+    text-align: center;
+  }
 }
 
 .footer-page__heading {
   border-bottom: 1px solid @footer-text-color;
+
+  @media @desktop-widths {
+    display: inline-block;
+    margin-bottom: 50px;
+
+    font-size: @font-size-biggest;
+    text-transform: uppercase;
+  }
 }
 
 .footer-page__inner-wrap {
@@ -19,14 +38,36 @@
 
   text-align: center;
   border-bottom: 1px solid @footer-text-color;
+
+  @media @desktop-widths {
+    justify-content: space-around;
+
+    font-size: @font-size-big;
+
+    border-bottom: 0;
+  }
 }
 
 .footer-page__link {
   color: @footer-text-color;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .footer-page__left {
   color: #858a8d;
   font-size: @font-size-mini;
+
+  & .footer-page__text {
+
+    @media @desktop-widths {
+      display: inline-block;
+    }
+  }
 }
+
+
 

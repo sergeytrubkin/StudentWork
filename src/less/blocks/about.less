@@ -1,0 +1,41 @@
+.about {
+  border-top: 2px solid @border-section;
+  border-bottom: 2px solid @border-section;
+
+  background: #000 url("../../img/16-fon-dlya-sayta.png");
+}
+
+.about__wrap {
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px 0;
+
+  @media @desktop-widths {
+    max-width: @max-widht-desktop;
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+}
+
+.about__heading {
+  margin: 0;
+  color: @heading-text-color;
+  text-shadow: 3px 2px 1px #050505;
+
+  @media @desktop-widths {
+    font-size: @font-size-biggest;
+  }
+}
+
+.about__text {
+  color: @about-text-color;
+  text-align: justify;
+
+  &:first-letter {
+    margin-left: 20px;
+  }
+
+  @media @desktop-widths {
+    font-size: @font-size-big;
+  }
+}
