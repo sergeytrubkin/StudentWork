@@ -1,0 +1,93 @@
+.form {
+  padding: 30px 30px;
+  background: #fcfdff;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(41, 137, 216, 0.7) 10%, rgba(41, 137, 216, 0.7) 90%, rgba(255, 255, 255, 0) 100%);
+
+  &__cooperation {
+
+    @media @desktop-widths {
+      order: 2;
+    }
+  }
+  @media @tablet-widths {
+    display: inline-block;
+    width: 50%;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, rgba(41, 137, 216, 0.5) 0%, rgba(41, 137, 216, 0.5) 100%);
+
+    border-radius: 15px;
+
+    font-size: @font-size-mini;
+    box-sizing: border-box;
+  }
+
+  @media @desktop-widths {
+    background: rgba(180,247,227,1);
+    background: linear-gradient(to bottom, rgba(180,247,227, 0.5) 0%, rgba(219,184,131, 0.5) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b4f7e3', endColorstr='#dbb883', GradientType=0 );
+
+    font-size: @font-size-normal;
+  }
+}
+
+.form__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.form__title {
+  margin-bottom: 30px;
+
+  text-shadow: 0 0 3px #000;
+  color: @form-title;
+
+  @media @desktop-widths {
+    font-size: @font-size-big;
+  }
+}
+
+.form__btn {
+  width: 100%;
+  padding: 15px 25px;
+  margin-bottom: 15px;
+
+  background-color: @form-btn-bg;
+
+  text-transform: uppercase;
+  font-weight: bold;
+
+  border: 1px solid hsl(0, 100%, 0);
+  border-radius: 15px;
+  box-shadow: 3px 3px 16px 0px #101010;
+
+  transition: 0.3s all  ease;
+
+  &:hover {
+    background-color: @form-btn-focus;
+    box-shadow: 3px 3px 16px 0px #101010;
+  }
+
+  &:active {
+    background-color: darken(@form-btn-bg, 10%);
+    box-shadow: 2px 2px 4px 0 #101010 inset;
+  }
+}
+
+.form__endnote {
+  margin-bottom: 15px;
+  opacity: 1;
+
+  &-visible {
+    display: none;
+
+    @media @tablet-widths {
+      display: inline;
+    }
+  }
+}
+
+.form__mark {
+  color: @form-warning-text;
+}

@@ -1,0 +1,203 @@
+//= templates/head.html
+
+<body>
+  <header id="js-header" class="header-page">
+    <div id="js-main-menu" class="header-page__top">
+      <div class="header-page__wrap">
+
+        <div class="logo">
+          <a href="#js-header" class="logo__link">Логотип</a>
+        </div>
+
+        <!-- main-menu -->
+        <button class="btn burger  burger--nojs" type="button">
+          <span class="burger__layer">Меню</span>
+        </button>
+        <nav class="main-nav  main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a href="#js-header" class="main-nav__link">Узнать стоимость</a></li>
+            <li class="main-nav__item"><a href="#about" class="main-nav__link">О нас</a></li>
+            <li class="main-nav__item"><a href="#cooperation" class="main-nav__link">Авторам</a></li>
+            <li class="main-nav__item"><a href="#contacts" class="main-nav__link">Контакты</a></li>
+          </ul>
+        </nav><!-- /main-nav -->
+
+        <!-- header-page__contacts -->
+        <div class="header-page__contacts">
+          <span class="header-page__text">Напишите нам</span>
+          <a href="mailto:likvitbel@mail.ru" class="header-page__link">
+            likvitbel@mail.ru
+          </a>
+        </div><!-- /header-page__contacts -->
+      </div><!-- /header-page__wrap -->
+    </div><!-- /header-page__top -->
+
+
+    <!-- promo -->
+    <div class="promo">
+
+      <div class="promo__wrap">
+
+        <h1 class="promo__title">
+          Помощь студентам при написании работ технической направленности
+        </h1>
+        <p class="promo__describe  promo__describe--visible">Цены на курсовые, рефераты и другие проекты мы оговариваем индивидуально с каждым клиентом, предварительно ознакомившись с объёмом работ. В нашей компании, Вы можете заказать дипломную работу или курсовую по низким ценам, для этого достаточно заполнить форму заявки!</p>
+
+        <!-- form -->
+
+        <form class="form" action="#" method="post" enctype="multipart/form-data">
+          <div class="form__wrapper">
+            <h3 class="form__title">Оформить заявку</h3>
+            <div class="field-text">
+              <div class="field-text__wrapper">
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="date" name="deadline" required>
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="text" name="workTheme" placeholder="Тема работы*" required>
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="text" name="subjectName" placeholder="Предмет">
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="number" name="count" placeholder="Кол-во страниц*" required>
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="text" name="name" placeholder="Ваше имя" required>
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="tel" name="tel" placeholder="Номер телефона*" required>
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <input class="field-text__input" type="email" name="mail" placeholder="Ваш email*">
+                  <span class="field-text__text"></span>
+                </label>
+
+                <label class="field-text__item">
+                  <select class="field-text__select" name="country" id="country">
+                    <option value="false">Ваша страна</option>
+                    <option value="blr">Беларусь</option>
+                    <option value="rus">Россия</option>
+                    <option value="ukr">Украина</option>
+                  </select>
+                  <span class="field-text__text"></span>
+                </label>
+
+              </div><!-- /field-text__wrapper -->
+            </div><!-- field-text -->
+
+            <label class="field-text__file">
+              <input class="field-text__input-file" type="file" multiple name="file">
+            </label>
+
+            <div class="form__button">
+              <div class="form__button-wrap">
+                <button type="submit" class="btn form__btn">Узнать стоимость</button>
+                <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+              </div>
+            </div>
+
+          </div><!-- /form__wrapper -->
+        </form><!-- /form -->
+      </div><!-- /promo__wrap -->
+    </div><!-- /promo -->
+
+  </header>
+
+
+  <!-- main -->
+
+  <main id="js-main" class="main-page">
+    <div class="main-page__wrap">
+
+
+
+      <!-- about -->
+
+      <div id="about" class="about">
+
+        <div class="about__wrap">
+
+          <h2 class="about__heading">О нас</h2>
+
+          <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In architecto, impedit accusamus reiciendis accusantium fugit asperiores excepturi earum vero non pariatur, corporis deleniti dolorum tempora quia possimus. Voluptatem libero, natus.</p>
+
+          <p class="about__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore maxime, ad sed. Dolores ex reiciendis similique libero optio, obcaecati modi? Soluta non vitae debitis autem ullam officiis repellendus a distinctio!</p>
+
+        </div><!-- /about__wrap -->
+
+      </div><!-- /about -->
+
+      <!-- cooperation -->
+
+      <div id="cooperation" class="cooperation">
+        <div class="cooperation__wrap">
+          <h3 class="cooperation__heading">Приглашаем к сотрудничеству авторов</h3>
+
+          <div class="cooperation__description">
+            <p class="cooperation__text">Наша компания рада предложить всем желающим преподавателям, учителям и научным работникам дополнительный заработок в сфере оказания консультационно-образовательных услуг. Мы готовы обеспечить Вас интересной работой. Свободный график, работа на удалении от офиса позволит Вам сохранить прежнее место работы и в то же время обеспечить себя дополнительным заработком.</p>
+            <p class="cooperation__text">Если Вам интересно наше предложение, пожалуйста, заполните представленную форму, после чего мы свяжемся с Вами для обсуждения дальнейшего сотрудничества.</p>
+          </div>
+
+          <form action="#" class="form form__cooperation">
+            <div class="form__wrapper">
+              <p class="form__title">Регистрируйтесь в форму - мы свяжемся с Вами для обсуждения условий сотрудничества</p>
+              <div class="field-text">
+                <div class="field-text__wrapper">
+
+                  <label class="field-text__item">
+                    <input class="field-text__input" type="text" name="name" placeholder="ФИО*" required>
+                    <span class="field-text__text"></span>
+                  </label>
+
+                  <label class="field-text__item">
+                    <input class="field-text__input" type="tel" name="tel" placeholder="номер телефона*" required>
+                    <span class="field-text__text"></span>
+                  </label>
+
+                  <label class="field-text__item">
+                    <input class="field-text__input" type="email" name="mail" placeholder="email*" required>
+                    <span class="field-text__text"></span>
+                  </label>
+
+                  <label class="field-text__item">
+                    <input class="field-text__input" type="text" name="address" placeholder="адрес">
+                    <span class="field-text__text"></span>
+                  </label>
+
+                  <label class="field-text__item  field-text__item--textarea">
+                    <textarea class="field-text__input" name="text" cols="30" rows="10" placeholder="Примечания"></textarea>
+                  </label>
+
+                </div><!-- /field-text__wrapper -->
+              </div><!-- field-text -->
+
+              <div class="form__button">
+                <div class="form__button-wrap">
+                  <button type="submit" class="btn form__btn">Отправить</button>
+                  <div class="form__endnote"><span class="form__mark">* </span>— обязательные <span class="form__endnote-visible">для заполнения</span> поля</div>
+                </div>
+              </div>
+
+            </div><!-- /form__wrapper -->
+          </form>
+        </div><!-- /cooperation__wrap -->
+      </div><!-- /cooperation -->
+    </div><!-- main-page__wrap -->
+
+  </main>
+
+  //= templates/end.html

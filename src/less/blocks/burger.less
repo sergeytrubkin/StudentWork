@@ -1,0 +1,81 @@
+.burger {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  width: 20px;
+  height: 14px;
+  margin-left: -20px;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  z-index: 10;
+  cursor: pointer;
+
+  &--nojs {
+    display: none;
+  }
+
+  @media @tablet-widths {
+    display: none;
+  }
+
+  @media @desktop-widths {
+    display: none;
+  }
+
+  &__layer {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: @burger-color;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 0;
+    transition-duration: 0.2s;
+    transition-delay: 0.4s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      background-color: @burger-color;
+      transition-duration: 0.2s;
+    }
+
+    &::after {
+      top: 6px;
+      transition-delay: 0.2s;
+    }
+
+    &::before {
+      top: -6px;
+    }
+  }
+
+  &--close .burger__layer {
+    background-color: transparent;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      left: 0;
+      background-color: @burger-color;
+    }
+
+    &::before {
+      transform: translateY(6px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translateY(-6px) rotate(-45deg);
+    }
+  }
+}
